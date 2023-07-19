@@ -1,0 +1,190 @@
+SQL> SHOW USER;
+USER is "SCOTT"
+SQL> SELECT * FROM ALL_USERS;;
+SELECT * FROM ALL_USERS;
+                       *
+ERROR at line 1:
+ORA-00911: invalid character 
+
+
+SQL> SELECT * FROM ALL_USERS;
+
+USERNAME                          USER_ID CREATED                                                                                                                                                       
+------------------------------ ---------- ---------                                                                                                                                                     
+BI                                     60 31-MAY-23                                                                                                                                                     
+PM                                     59 31-MAY-23                                                                                                                                                     
+SH                                     58 31-MAY-23                                                                                                                                                     
+IX                                     57 31-MAY-23                                                                                                                                                     
+OE                                     56 31-MAY-23                                                                                                                                                     
+HR                                     55 31-MAY-23                                                                                                                                                     
+SCOTT                                  54 30-AUG-05                                                                                                                                                     
+MGMT_VIEW                              53 30-AUG-05                                                                                                                                                     
+MDDATA                                 50 30-AUG-05                                                                                                                                                     
+SYSMAN                                 51 30-AUG-05                                                                                                                                                     
+MDSYS                                  46 30-AUG-05                                                                                                                                                     
+SI_INFORMTN_SCHEMA                     45 30-AUG-05                                                                                                                                                     
+ORDPLUGINS                             44 30-AUG-05                                                                                                                                                     
+ORDSYS                                 43 30-AUG-05                                                                                                                                                     
+OLAPSYS                                47 30-AUG-05                                                                                                                                                     
+ANONYMOUS                              39 30-AUG-05                                                                                                                                                     
+XDB                                    38 30-AUG-05                                                                                                                                                     
+CTXSYS                                 36 30-AUG-05                                                                                                                                                     
+EXFSYS                                 34 30-AUG-05                                                                                                                                                     
+WMSYS                                  25 30-AUG-05                                                                                                                                                     
+DBSNMP                                 24 30-AUG-05                                                                                                                                                     
+TSMSYS                                 21 30-AUG-05                                                                                                                                                     
+DMSYS                                  35 30-AUG-05                                                                                                                                                     
+DIP                                    19 30-AUG-05                                                                                                                                                     
+OUTLN                                  11 30-AUG-05                                                                                                                                                     
+SYSTEM                                  5 30-AUG-05                                                                                                                                                     
+SYS                                     0 30-AUG-05                                                                                                                                                     
+
+27 rows selected.
+
+SQL> SELECT * FROM TAB;
+
+TNAME                          TABTYPE  CLUSTERID                                                                                                                                                       
+------------------------------ ------- ----------                                                                                                                                                       
+DEPT                           TABLE                                                                                                                                                                    
+EMP                            TABLE                                                                                                                                                                    
+BONUS                          TABLE                                                                                                                                                                    
+SALGRADE                       TABLE                                                                                                                                                                    
+CUSTOMER                       TABLE                                                                                                                                                                    
+PRODUCTS                       TABLE                                                                                                                                                                    
+COURSE                         TABLE                                                                                                                                                                    
+
+7 rows selected.
+
+SQL> SELECT * FROM COURSE;
+
+       CID CNAME                CADDRESS                                                                                                                                                                
+---------- -------------------- --------------------                                                                                                                                                    
+        12 qasdfgh              sdtfy                                                                                                                                                                   
+
+SQL> SELECT * FROM EMP;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                                                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                                                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                                                                   
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                                                                   
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                                                                   
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                                                                   
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                                                                   
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                                                                   
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                                                                                                                   
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                                                                   
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10                                                                                                                   
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                                                                   
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                                                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                                                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                                                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                                                                                                   
+
+14 rows selected.
+
+SQL> SELECT * FROM DEPT;
+
+    DEPTNO DNAME          LOC                                                                                                                                                                           
+---------- -------------- -------------                                                                                                                                                                 
+        10 ACCOUNTING     NEW YORK                                                                                                                                                                      
+        20 RESEARCH       DALLAS                                                                                                                                                                        
+        30 SALES          CHICAGO                                                                                                                                                                       
+        40 OPERATIONS     BOSTON                                                                                                                                                                        
+
+SQL> SELECT * FROM BONUS;
+
+no rows selected
+
+SQL> SELECT * FROM SALGRADE;
+
+     GRADE      LOSAL      HISAL                                                                                                                                                                        
+---------- ---------- ----------                                                                                                                                                                        
+         1        700       1200                                                                                                                                                                        
+         2       1201       1400                                                                                                                                                                        
+         3       1401       2000                                                                                                                                                                        
+         4       2001       3000                                                                                                                                                                        
+         5       3001       9999                                                                                                                                                                        
+
+SQL> SELECT ENAME,EMPNO
+  2  FROM EMP;
+
+ENAME           EMPNO                                                                                                                                                                                   
+---------- ----------                                                                                                                                                                                   
+SMITH            7369                                                                                                                                                                                   
+ALLEN            7499                                                                                                                                                                                   
+WARD             7521                                                                                                                                                                                   
+JONES            7566                                                                                                                                                                                   
+MARTIN           7654                                                                                                                                                                                   
+BLAKE            7698                                                                                                                                                                                   
+CLARK            7782                                                                                                                                                                                   
+SCOTT            7788                                                                                                                                                                                   
+KING             7839                                                                                                                                                                                   
+TURNER           7844                                                                                                                                                                                   
+ADAMS            7876                                                                                                                                                                                   
+JAMES            7900                                                                                                                                                                                   
+FORD             7902                                                                                                                                                                                   
+MILLER           7934                                                                                                                                                                                   
+
+14 rows selected.
+
+SQL> SELECT LOC FROM DEPT;
+
+LOC                                                                                                                                                                                                     
+-------------                                                                                                                                                                                           
+NEW YORK                                                                                                                                                                                                
+DALLAS                                                                                                                                                                                                  
+CHICAGO                                                                                                                                                                                                 
+BOSTON                                                                                                                                                                                                  
+
+SQL> SELECT DNAME,LOC FROM DEPT;
+
+DNAME          LOC                                                                                                                                                                                      
+-------------- -------------                                                                                                                                                                            
+ACCOUNTING     NEW YORK                                                                                                                                                                                 
+RESEARCH       DALLAS                                                                                                                                                                                   
+SALES          CHICAGO                                                                                                                                                                                  
+OPERATIONS     BOSTON                                                                                                                                                                                   
+
+SQL> SELECT COMM FROM EMP;
+
+      COMM                                                                                                                                                                                              
+----------                                                                                                                                                                                              
+                                                                                                                                                                                                        
+       300                                                                                                                                                                                              
+       500                                                                                                                                                                                              
+                                                                                                                                                                                                        
+      1400                                                                                                                                                                                              
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+         0                                                                                                                                                                                              
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+
+14 rows selected.
+
+SQL> SELECT HIREDATE FROM EMP;
+
+HIREDATE                                                                                                                                                                                                
+---------                                                                                                                                                                                               
+17-DEC-80                                                                                                                                                                                               
+20-FEB-81                                                                                                                                                                                               
+22-FEB-81                                                                                                                                                                                               
+02-APR-81                                                                                                                                                                                               
+28-SEP-81                                                                                                                                                                                               
+01-MAY-81                                                                                                                                                                                               
+09-JUN-81                                                                                                                                                                                               
+19-APR-87                                                                                                                                                                                               
+17-NOV-81                                                                                                                                                                                               
+08-SEP-81                                                                                                                                                                                               
+23-MAY-87                                                                                                                                                                                               
+03-DEC-81                                                                                                                                                                                               
+03-DEC-81                                                                                                                                                                                               
+23-JAN-82                                                                                                                                                                                               
+
+14 rows selected.
+
+SQL> SPOOL OFF;
